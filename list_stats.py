@@ -17,8 +17,6 @@ def find_max(numbers):
             maximum = num
     return maximum
 
-# ---- Funciones a implementar ----
-
 def range_of(numbers):
     """
     Retorna la diferencia entre el maximo y el minimo de la lista.
@@ -26,7 +24,9 @@ def range_of(numbers):
 
     Ejemplo: range_of([3, 1, 7, 2]) -> 6  (7 - 1)
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    minimo=find_min(numbers)
+    maximo=find_max(numbers)
+    return maximo-minimo
 
 
 def average(numbers):
@@ -37,7 +37,15 @@ def average(numbers):
 
     Ejemplo: average([10, 20, 30]) -> 20.0
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    suma=0
+    ctd=0
+    for numero in numbers:
+        suma+=numero
+        ctd+=1
+    if ctd==0:
+        return 0.0
+    return round(suma/ctd, 1)
+
 
 
 def describe(numbers):
@@ -50,4 +58,11 @@ def describe(numbers):
 
     Ejemplo: describe([3, 1, 7, 2]) -> "Min:1 Max:7 Range:6 Avg:3.2"
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    if numbers==[]:
+        return "Empty list"
+    else:
+        maximo=find_max(numbers)
+        minimo=find_min(numbers)
+        rango=range_of(numbers)
+        avg=average(numbers)
+        return f"Min:{minimo} Max:{maximo} Range:{rango} Avg:{avg}"
