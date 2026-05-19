@@ -1,4 +1,4 @@
-# Replace the "ANSWER HERE" for your answer
+    # Replace the "ANSWER HERE" for your answer
 
 def enumerate_list(lst):
     """
@@ -12,7 +12,7 @@ def enumerate_list(lst):
     lista_new = []
     indice = 0
     for n in lst:
-        if n != "":
+        if n.strip() != "":
             lista_new.append(f"{indice}. {n}")
             indice +=1
     return lista_new
@@ -29,7 +29,7 @@ def enumerate_backwards(lst):
     lista_new = []
     indice = 0
     for n in lst:
-        if n != "":
+        if n.strip() != "":
             lista_new.append(f"{indice}. {n[::-1]}")
             indice +=1
     return lista_new

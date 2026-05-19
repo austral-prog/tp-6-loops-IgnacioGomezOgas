@@ -29,14 +29,11 @@ def double_until(limit):
     Ejemplo: double_until(1) -> [1]
     Ejemplo: double_until(0) -> []
     """
-    lst=[]
-    if limit>0:
-        actual=1
-        lst.append(1)
-        while actual<=limit:
-            lst.append(actual*2)
-            actual = actual*2
-    if lst[-1]>limit:
-        lst.pop()
+    lst = []
+    actual = 1
+    # El bucle solo corre si el número actual no superó el límite
+    while actual <= limit:
+        lst.append(actual)  # Lo guardamos primero
+        actual = actual * 2  # Lo duplicamos para la siguiente vuelta
     return lst
 

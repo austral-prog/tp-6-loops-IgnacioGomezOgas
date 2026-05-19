@@ -35,6 +35,8 @@ def col_sums(matrix):
 
     Ejemplo: col_sums([[1, 2, 3], [4, 5, 6]]) -> [5, 7, 9]
     """
+    if not matrix:
+        return []
     lst=[]
     cantidad_col=len(matrix[0])
     for c in range(cantidad_col):

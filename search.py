@@ -23,11 +23,9 @@ def index_of_by_index(target, lst, start):
 
     Ejemplo: index_of_by_index("Black", ["Red", "Black", "Green", "Black"], 2) -> 3
     """
-    indice=start
     for i in range(start, len(lst)):
         if lst [i]== target:
-            return indice
-        indice+=1
+            return i
     return -1
 
 
